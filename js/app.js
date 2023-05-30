@@ -3864,4 +3864,19 @@
     tabs();
     headerScroll();
     stickyBlock();
+    document.getElementById("button-registr").addEventListener("click", displayDate);
+    function displayDate() {
+        document.getElementById("popup__form").classList.toggle("close");
+        document.getElementById("form__registration").classList.toggle("open");
+    }
+    document.getElementById("header-login").addEventListener("click", popOp);
+    function popOp() {
+        document.getElementById("popup").classList.toggle("popup__open");
+    }
+    document.getElementById("popup__close").addEventListener("click", popCl);
+    function popCl() {
+        document.getElementById("popup").classList.toggle("popup__open");
+        document.getElementById("popup__form").classList.remove("close");
+        document.getElementById("form__registration").classList.remove("open");
+    }
 })();

@@ -1213,6 +1213,159 @@ h6 {
   line-height: 1.2;
 }
 
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
+}
+
+.popup__content {
+  position: relative;
+  height: 100%;
+  border-radius: 1.875rem;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3.125rem 2.5rem;
+}
+
+.popup__close {
+  position: absolute;
+  top: 1.5625rem;
+  right: 1.5625rem;
+  font-size: 0.875rem;
+  font-family: sans-serif;
+}
+
+.popup__text {
+  right: 1.5625rem;
+  font-size: 0.875rem;
+  font-family: sans-serif;
+  padding: 0rem 3.125rem;
+  line-height: 1.5;
+}
+
+.popup.popup__open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.popup__form .input-popup {
+  font-size: 1.125rem;
+  border-bottom: 0.0625rem solid grey;
+  padding-left: 0.625rem;
+  min-height: 3rem;
+  outline: none;
+}
+
+.popup__form .input-popup:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+
+.popup__form .button {
+  border-radius: 2rem;
+  background: #0f97aa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  font-family: sans-serif;
+  padding: 0.9375rem 1.875rem;
+  color: #ffffff;
+  margin-top: 0.9375rem;
+  -webkit-transition: background 0.3s ease 0s;
+  -o-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s;
+}
+
+.popup__form .button:hover {
+  background: #0b7280;
+}
+
+.popup__form .button-registr {
+  border-radius: 2rem;
+  border: 0.0625rem solid #0f97aa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  font-family: sans-serif;
+  padding: 0.9375rem 1.875rem;
+  color: #000000;
+  margin-top: 0.9375rem;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.popup__form .button-registr:hover {
+  background: #0f97aa;
+  color: #ffffff;
+}
+
+.form__registration {
+  display: none;
+}
+
+.popup__form.close {
+  display: none;
+}
+
+.form__registration.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .no-webp .page__about{
   background: url("../img/about us/main/MitsuiKyoto_Interior2.jpg") 0rem 0rem/100% 234px no-repeat; }
 
@@ -2534,6 +2687,10 @@ h6 {
     padding-right: 2.5rem;
   }
 
+  .popup__content {
+    width: 28.75rem;
+  }
+
   .block-about__title {
     font-size: 2.5rem;
   }
@@ -3012,6 +3169,10 @@ h6 {
 
   .guest-info__contacts {
     padding-right: 0.9375rem;
+  }
+
+  .popup__content {
+    width: 18.125rem;
   }
 
   .block-about__title {
@@ -4737,6 +4898,18 @@ h6 {
 @supports not (padding-right: clamp( 0.9375rem , 0.4375rem  +  2.5vw , 2.5rem )) {
     .guest-info__contacts {
       padding-right: calc(0.9375rem + 1.5625 * (100vw - 20rem) / 62.5);
+    }
+}
+
+@supports (width: clamp( 18.125rem , 14.725rem  +  17vw , 28.75rem )) {
+    .popup__content {
+      width: clamp( 18.125rem , 14.725rem  +  17vw , 28.75rem );
+    }
+}
+
+@supports not (width: clamp( 18.125rem , 14.725rem  +  17vw , 28.75rem )) {
+    .popup__content {
+      width: calc(18.125rem + 10.625 * (100vw - 20rem) / 62.5);
     }
 }
 
