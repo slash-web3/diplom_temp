@@ -2259,13 +2259,13 @@ h6 {
   display: none !important;
 }
 
-@media (min-width: 47.99875em) {
+@media (min-width: 48.06125em) {
   .type-list__slider {
-    max-width: 39.6875rem;
+    width: 39.6875rem;
   }
 
   .type-list__slider {
-    max-height: 24.4375rem;
+    height: 24.4375rem;
   }
 }
 
@@ -3122,11 +3122,11 @@ h6 {
   }
 
   .type-list__slider {
-    max-width: 22.75rem;
+    width: 22.75rem;
   }
 
   .type-list__slider {
-    max-height: 14rem;
+    height: 14rem;
   }
 
   .type-list__description {
@@ -3730,8 +3730,8 @@ h6 {
   }
 
   .type-list__slider {
-    max-width: 100%;
-    max-height: 100%;
+    min-width: 100%;
+    height: 100%;
   }
 
   .type-list__description {
@@ -5450,28 +5450,28 @@ h6 {
 }
 }
 
-@media (min-width: 20em) and (max-width: 47.99875em) {
-@supports (max-width: clamp( 22.75rem , 10.6512455913rem  +  60.4937720434vw , 39.6875rem )) {
+@media (min-width: 20em) and (max-width: 48.06125em) {
+@supports (width: clamp( 22.75rem , 10.6781927926rem  +  60.3590360372vw , 39.6875rem )) {
     .type-list__slider {
-      max-width: clamp( 22.75rem , 10.6512455913rem  +  60.4937720434vw , 39.6875rem );
+      width: clamp( 22.75rem , 10.6781927926rem  +  60.3590360372vw , 39.6875rem );
     }
 }
 
-@supports not (max-width: clamp( 22.75rem , 10.6512455913rem  +  60.4937720434vw , 39.6875rem )) {
+@supports not (width: clamp( 22.75rem , 10.6781927926rem  +  60.3590360372vw , 39.6875rem )) {
     .type-list__slider {
-      max-width: calc(22.75rem + 16.9375 * (100vw - 20rem) / 27.99875);
+      width: calc(22.75rem + 16.9375 * (100vw - 20rem) / 28.06125);
     }
 }
 
-@supports (max-height: clamp( 14rem , 6.5443100138rem  +  37.2784499308vw , 24.4375rem )) {
+@supports (height: clamp( 14rem , 6.5609158537rem  +  37.1954207314vw , 24.4375rem )) {
     .type-list__slider {
-      max-height: clamp( 14rem , 6.5443100138rem  +  37.2784499308vw , 24.4375rem );
+      height: clamp( 14rem , 6.5609158537rem  +  37.1954207314vw , 24.4375rem );
     }
 }
 
-@supports not (max-height: clamp( 14rem , 6.5443100138rem  +  37.2784499308vw , 24.4375rem )) {
+@supports not (height: clamp( 14rem , 6.5609158537rem  +  37.1954207314vw , 24.4375rem )) {
     .type-list__slider {
-      max-height: calc(14rem + 10.4375 * (100vw - 20rem) / 27.99875);
+      height: calc(14rem + 10.4375 * (100vw - 20rem) / 28.06125);
     }
 }
 }
